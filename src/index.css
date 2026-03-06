@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+    color: #fff;
+    font-family: "Geist", sans-serif;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+.header {
+    padding: 24px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* NAV */
+
+.nav ul {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    font-size: 16px;
+}
+
+.nav li {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+/* BUTTON */
+
+.cta-btn {
+    width: 200px;
+    height: 48px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    padding: 80px 60px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 640px;
+}
+
+.hero-text h2 {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(36px, 5vw, 70px);
+    font-weight: 700;
+    line-height: 1.05;
+}
+
+.hero-text p {
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 1.5;
+    opacity: 0.85;
+}
+
+.hero-cta {
+    margin-top: 50px;
+}
+
+/* TRIANGLE */
+
+.hero-traingle {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.hero-traingle img {
+    width: 110px;
+    opacity: 0.35;
+}
+
+/* IMAGE */
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: clamp(260px, 40vw, 600px);
+    transform: translateY(80px);
+}
+
+/* -------------------- */
+/* TABLET */
+/* -------------------- */
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 20px 40px;
+    }
+
+    .hero {
+        padding: 60px 40px;
+    }
+
+    .hero-text h2 {
+        font-size: clamp(32px, 6vw, 50px);
+    }
+
+    .hero-image img {
+        width: clamp(240px, 45vw, 450px);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .hero {
+        padding: 40px 24px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-cta {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image img {
+        transform: none;
+        width: 90%;
+        max-width: 400px;
+        margin-top: 40px;
+    }
+
+    .hero-traingle {
+        display: none;
+    }
+
+    .cta-btn {
+        width: 180px;
+    }
+    .header {
+        padding: 20px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    .nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #000;
+        display: none;
+        padding: 20px 0;
+    }
+
+    .nav.open {
+        display: block;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.hamburger {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
